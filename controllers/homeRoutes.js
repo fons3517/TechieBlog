@@ -2,30 +2,30 @@ const router = require('express').Router();
 const { Post, User, } = require('../models');
 const withAuth = require('../utils/auth');
 
-// router.get('/', async (req, res) => {
-//   try {
-//     // Get all posts and JOIN with user data
-//     const postData = await Post.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['username'],
-//         },
-//       ],
-//     });
-
-//     // Serialize data so the template can read it
-//     const posts = postData.map((post) => post.get({ plain: true }));
-
-//     // Pass serialized data and session flag into template
-//     res.render('homepage', {
-//       projects,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.get('/', async (req, res) => {
+  try {
+    // Get all posts and JOIN with user data
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+    console.log('Reached git')
+    // Serialize data so the template can read it
+    const posts = postData.map((post) => post.get({ plain: true }));
+    console.log(posts);
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      posts,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/post/:id', async (req, res) => {
   try {
@@ -59,9 +59,9 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    console.log('user', user)
     res.render('profile', {
-      ...user,
+      user,
       logged_in: true
     });
   } catch (err) {
