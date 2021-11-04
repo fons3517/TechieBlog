@@ -26,8 +26,5 @@ Alfonso Robles
 
 
 
-![Category.js image](./Assets/insomniaCategories.jpg)
-![index.js image](./Assets/insomniaProducts.jpg)
-![product.js image](./Assets/insomniaTags.jpg)
-![productTag.js image](./Assets/indexJS.jpg)
-![tag.js image](./Assets/ProductJS.jpg)
+![signupPage.js image](./Images/signupPage.jpg)
+![techieBlogHomepage.js image](./Images/techieBlogHomepage.jpg)
