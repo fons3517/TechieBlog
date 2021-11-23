@@ -18,9 +18,13 @@ Alfonso Robles
 
 #### Packages
 
--[Npm mysql2] -[Npm Sequelize] -[Npm dotenv] 
--[Npm express-handlebars] -[Npm bcrypt] -[Npm express-session]
--[Npm connect-session-sequelize]
+- [Npm mysql2] 
+- [Npm Sequelize] 
+- [Npm dotenv] 
+- [Npm express-handlebars] 
+- [Npm bcrypt] 
+- [Npm express-session]
+- [Npm connect-session-sequelize]
 
 #### Media
 
