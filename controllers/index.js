@@ -3,6 +3,7 @@ const userRoutes = require('./userRoutes');
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
 const commentRoutes = require('./comment-routes');
+const postRoutes = require('./postRoutes');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
@@ -11,3 +12,6 @@ router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
 
 module.exports = router;
+
+
+
