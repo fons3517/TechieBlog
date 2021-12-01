@@ -28,7 +28,5 @@ Alfonso Robles
 
 #### Media
 
-
-
 ![signupPage.js image](./Images/signupPage.jpg)
 ![techieBlogHomepage.js image](./Images/techieBlogHomepage.jpg)
