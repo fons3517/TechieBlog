@@ -1,0 +1,26 @@
+<button
+    type='submit'
+    class='btn uk-button uk-button-primary uk-margin-bottom'
+    id='create-new-post'
+  >+ Create new post</button>
+
+{{#if posts.length}}
+  <section>
+    <legend class='uk-legend uk-margin'>Dashboard</legend>
+
+    <ul class='post-list uk-list'>
+      {{#each posts as |post|}}
+        <li class='uk-card uk-card-body uk-card-default'>
+          {{> post-info post}}
+          <a
+            href='/dashboard/edit/{{post.id}}'
+            class='edit-link uk-button uk-button-danger'
+          >edit post</a>
+        </li>
+
+      {{/each}}
+    </ul>
+  </section>
+{{/if}}
+
+<script src='/js/create-post.js'></script>

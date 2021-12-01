@@ -1,0 +1,50 @@
+<a href='/dashboard' class='go-back uk-button uk-button-primary'>
+  &larr; Back to dashboard</a>
+<br />
+<br />
+
+<article class='new-page'>
+  <section class='edit-form-page'>
+    <div class='form-heading uk-margin'>
+      <legend class='uk-legend uk-margin-top'>Edit Post</legend>
+    </div>
+    <div class='form-section'>
+      <form class='edit-post-form uk-form-stacked'>
+        <div class='post-title-section uk-margin'>
+          <label
+            for='post-title form-stacked-text'
+            class='uk-form-label'
+          >Title</label>
+          <input
+            type='text'
+            name='post-title'
+            id='post-title'
+            value='{{post.title}}'
+          />
+        </div>
+        <div class='post-content uk-margin'>
+          <label
+            for='post-content form-stacked-text'
+            class='uk-form-label'
+          >Content</label>
+          <textarea
+            class='entry-field'
+            id='post-text'
+            name='post-text'
+          >{{post.post_text}}</textarea>
+        </div>
+        <button type='submit' class='btn uk-button uk-button-default'>Update
+          post</button>
+        <button
+          type='button'
+          class='delete-post-btn btn uk-button uk-button-danger'
+        >Delete post</button>
+      </form>
+    </div>
+  </section>
+</article>
+
+{{#if loggedIn}}
+  <script src='/js/edit-post.js'></script>
+  <script src='/js/delete-post.js'></script>
+{{/if}}
