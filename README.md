@@ -1,5 +1,4 @@
 # Project_Title
-
 TECHIE_BLOG
 ## Description:
 Techie_Blog is a fullstack web application that allows developers to publish their blog posts and comment on other developers’ posts as well.
